@@ -1,11 +1,10 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const ModuleFederationPlugin = require("webpack").container
-  .ModuleFederationPlugin;
+const { ModuleFederationPlugin } = require("webpack").container;
 const path = require("path");
 
 module.exports = {
   entry: "./src/index",
-  mode: "development",
+  mode: "production",
   devServer: {
     contentBase: path.join(__dirname, "dist"),
     port: 3001,

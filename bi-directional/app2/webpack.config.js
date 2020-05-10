@@ -1,10 +1,11 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { ModuleFederationPlugin } = require("webpack").container;
 const path = require("path");
-const sharedReduce = ["react", "react-dom"].reduce((shared, pkg) => {
-  Object.assign(shared, { [`${pkg}-${require(pkg).version}`]: pkg });
-  return shared;
-}, {});
+// const AutomaticVendorFederation = require('@module-federation/propriatery-tools/packages/automatic-vendor-federation-plugin')
+//
+// const pkgJson = require('./package.json')
+// const exclude = ['babel','plugin','preset','webpack','loader','serve','@module-federation/propriatery-tools']
+// const ignoreVersion = ['react','react-dom']
 module.exports = {
   entry: "./src/index",
   mode: "development",
@@ -28,20 +29,20 @@ module.exports = {
     ],
   },
   plugins: [
-    new ModuleFederationPlugin({
-      name: "app2",
-      library: { type: "var", name: "app2" },
-      filename: "remoteEntry.js",
-      remotes: {
-        app1: "app1",
-      },
-      exposes: {
-        Button: "./src/Button",
-      },
-      shared: ["rea"],
-    }),
     new HtmlWebpackPlugin({
       template: "./public/index.html",
     }),
   ],
 };
+// new ModuleFederationPlugin({
+//   name: "app2",
+//   library: { type: "var", name: "app2" },
+//   filename: "remoteEntry.js",
+//   remotes: {
+//     app1: "app1",
+//   },
+//   exposes: {
+//     Button: "./src/Button",
+//   },
+//   shared: AutomaticVendorFederation(exclude,ignoreVersion,pkgJson)
+// }),

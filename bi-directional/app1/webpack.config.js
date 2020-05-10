@@ -1,8 +1,11 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const ModuleFederationPlugin = require("webpack").container
-  .ModuleFederationPlugin;
+// const {ModuleFederationPlugin} = require("webpack").container
 const path = require("path");
+// const AutomaticVendorFederation = require('@module-federation/propriatery-tools/packages/automatic-vendor-federation-plugin')
 
+// const pkgJson = require('./package.json')
+// const exclude = ['babel','plugin','preset','webpack','loader','serve','@module-federation/propriatery-tools']
+// const ignoreVersion = ['react','react-dom']
 module.exports = {
   entry: "./src/index",
   mode: "development",
@@ -26,26 +29,21 @@ module.exports = {
     ],
   },
   plugins: [
-    new ModuleFederationPlugin({
-      name: "app1",
-      library: { type: "var", name: "app1" },
-      filename: "remoteEntry.js",
-      remotes: {
-        app2: "app2",
-      },
-      exposes: {
-        Button: "./src/Button",
-      },
-      // sharing code based on the installed version, to allow for multiple vendors with different versions
-      shared: ["react", "react-dom"].reduce((shared, pkg) => {
-        // you can also trim the patch version off so you share at the feature version level
-        // react-16.8, not react-16.8.3, Better vendor sharing will be available as you'd share 16.8.x
-        Object.assign(shared, { [`${pkg}-${require(pkg).version}`]: pkg });
-        return shared;
-      }, {}),
-    }),
     new HtmlWebpackPlugin({
       template: "./public/index.html",
     }),
   ],
 };
+// new ModuleFederationPlugin({
+//   name: "app1",
+//   library: { type: "var", name: "app1" },
+//   filename: "remoteEntry.js",
+//   remotes: {
+//     app2: "app2",
+//   },
+//   exposes: {
+//     Button: "./src/Button",
+//   },
+//   // sharing code based on the installed version, to allow for multiple vendors with different versions
+//   shared: AutomaticVendorFederation(exclude,ignoreVersion,pkgJson)
+// }),

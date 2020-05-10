@@ -1991,7 +1991,7 @@
 
 "@module-federation/propriatery-tools@git+ssh://git@github.com:module-federation/proprietary-tools.git":
   version "1.0.0"
-  resolved "git+ssh://git@github.com:module-federation/proprietary-tools.git#1e322448bd13c9db3690a18cc58e25f9307a67af"
+  resolved "git+ssh://git@github.com:module-federation/proprietary-tools.git#8fcc5cc77b0b247ad30c0f4a71f03a63b881c139"
   dependencies:
     s3rver "^3.5.0"
     serverless "^1.69.0"

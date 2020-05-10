@@ -1,6 +1,5 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const ModuleFederationPlugin = require("webpack").container
-  .ModuleFederationPlugin;
+// const {ModuleFederationPlugin} = require("webpack").container
 const path = require("path");
 
 module.exports = {
@@ -26,17 +25,18 @@ module.exports = {
     ],
   },
   plugins: [
-    new ModuleFederationPlugin({
-      name: "app2",
-      library: { type: "var", name: "app2" },
-      filename: "remoteEntry.js",
-      exposes: {
-        Button: "./src/Button",
-      },
-      shared: ["react", "react-dom"],
-    }),
     new HtmlWebpackPlugin({
       template: "./public/index.html",
     }),
   ],
 };
+
+// new ModuleFederationPlugin({
+//   name: "app2",
+//   library: { type: "var", name: "app2" },
+//   filename: "remoteEntry.js",
+//   exposes: {
+//     Button: "./src/Button",
+//   },
+//   shared: ["react", "react-dom"],
+// }),

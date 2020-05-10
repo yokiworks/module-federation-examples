@@ -1991,15 +1991,7 @@
 
 "@module-federation/propriatery-tools@git+ssh://git@github.com:module-federation/proprietary-tools.git":
   version "1.0.0"
-  resolved "git+ssh://git@github.com:module-federation/proprietary-tools.git#b095a82f7e89b5bc637cb148d38e735257f38b63"
-  dependencies:
-    s3rver "^3.5.0"
-    serverless "^1.69.0"
-    wsrun "^5.2.0"
-
-"@module-federation/propriatery-tools@git+ssh://git@github.com:module-federation/proprietary-tools.git#wip-dshboard":
-  version "1.0.0"
-  resolved "git+ssh://git@github.com:module-federation/proprietary-tools.git#165cfcaa83fd7b303844403d6481cf05b5c2e199"
+  resolved "git+ssh://git@github.com:module-federation/proprietary-tools.git#1e322448bd13c9db3690a18cc58e25f9307a67af"
   dependencies:
     s3rver "^3.5.0"
     serverless "^1.69.0"

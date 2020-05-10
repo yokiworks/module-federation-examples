@@ -24,6 +24,8 @@ Back in the original terminal setup the s3 buckets
 
 ```shell script
 > yarn setup:local
+# OR if you dont have aws profiles already
+> yarn setup
 ```
 
 Build the packages
@@ -36,4 +38,12 @@ Deploy the s3 buckets
 
 ```shell script
 > yarn deploy:local
+# OR if you dont have aws profiles already
+> yarn deploy
+```
+
+Start the project
+
+```shell script
+> yarn start
 ```

@@ -1,0 +1,23 @@
+{
+  "name": "@module-federation/next-js",
+  "version": "0.1.0",
+  "resolutions": {
+    "webpack": "5.0.0-beta.16",
+    "tapable": "2.0.0-beta.9",
+    "webpack-dev-middleware": "^4.0.0-rc.1"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "postinstall": "node patch-next.js"
+  },
+  "dependencies": {
+    "next": "canary",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "webpack": "5.0.0-beta.16",
+    "tapable": "2.0.0-beta.9",
+    "webpack-dev-middleware": "^4.0.0-rc.1"
+  }
+}

@@ -16,7 +16,6 @@ If you need **support**, consider looking at my sponsor profile [https://github.
 
 **Medium post** **Original Webpack Issue** [https://link.medium.com/xzFgBBtAx6](https://module-federation.github.io/redirect?utm_source=ModuleFederationExamples&utm_campaign=game_changer_medium_post&utm_medium=https://link.medium.com/xzFgBBtAx6)
 
-
 # Examples
 
 > Legend:
